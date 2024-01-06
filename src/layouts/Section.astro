@@ -1,0 +1,12 @@
+---
+interface Props {
+  class?: string
+  maxWidth: string
+}
+
+const { class: className, maxWidth } = Astro.props
+---
+
+<section class={`mx-auto px-4 tablet:px-0 tablet:w-[75%] ${className}`} style={{ maxWidth }}>
+  <slot />
+</section>

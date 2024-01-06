@@ -1,0 +1,18 @@
+{
+  "SEO_DESCRIPTION": "Ivan Miyashiro, a dedicate Software Developer with 4+ years of experience in the industry. Discover who I am, explore my skills and projects, and feel free to contact me.",
+  "HEADER": [
+    "About",
+    "Experience",
+    "Tech",
+    "Projects",
+    "Contact"
+  ],
+  "HERO": {
+    "RICH_TEXT": {
+      "ACCENT": "years of experience",
+      "TEXT": "crafting high-performance web apps. I stand out in JavaScript technologies such as"
+    },
+    "PRIMARY_BTN": "Get Resume",
+    "SECONDARY_BTN": "About Me"
+  }
+}

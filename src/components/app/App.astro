@@ -1,0 +1,16 @@
+---
+import { getI18N } from "@/i18n"
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/app/0_Hero.astro";
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<Layout 
+  title="Ivan Miyashiro - Software Developer" 
+  description={i18n.SEO_DESCRIPTION}
+  i18nHeader={i18n.HEADER}
+>
+  <Hero i18n={i18n.HERO} />
+</Layout>

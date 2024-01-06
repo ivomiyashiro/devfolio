@@ -1,0 +1,32 @@
+---
+import Section from "@/layouts/Section.astro"
+import { Button } from "@/components/ui"
+
+const { i18n } = Astro.props
+
+const codingYears = new Date().getFullYear() - 2020
+---
+
+<Section class="mt-[-70px]" maxWidth="1000px">
+  <div class="flex items-center h-screen w-full relative">
+    <div class="flex flex-col justify-center pb-60px w-full tablet:p-0">
+      <div class={'animate-fadeUp delay-[2s]'}>
+        <h1 class="text-clamp font-extrabold text-textColor-300 leading-[1.2em] tracking-wide">
+          Ivan Miyashiro.
+          <span class="block text-textColor-200">Software Developer.</span>
+        </h1>
+        <p class="mt-[1em] mb-[3em] leading-[1.5em] tablet:max-w-[550px] font-light">
+          <span class="text-accent-100 font-medium">+{codingYears} {i18n.RICH_TEXT.ACCENT} </span> {i18n.RICH_TEXT.TEXT}<span class="text-accent-100 font-medium"> React.js & Node.js</span>
+        </p>
+        <div class="flex gap-4">
+          <Button className="w-[125px] tablet:w-[150px] !rounded ">
+            {i18n.PRIMARY_BTN}
+          </Button>
+          <Button variant="outlined" className="w-[125px] tablet:w-[150px] !rounded">
+            {i18n.SECONDARY_BTN}
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

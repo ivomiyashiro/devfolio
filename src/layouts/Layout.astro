@@ -1,31 +1,33 @@
 ---
-import Navbar from '../components/Navbar';
-import SocialMedia from '../components/SocialMedia';
-import 'animate.css';
+import { Header, SocialMedia } from '@/components/ui'
+import '@fontsource-variable/onest';
 
 interface Props {
-	title: string;
+	title: string
+  description: string
+  i18nHeader: string[]
 }
 
-const { title } = Astro.props;
+const { title, description, i18nHeader } = Astro.props;
+const { currentLocale } = Astro
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-background-100 text-textColor-200">
-    <Navbar client:load />
+	<body class="bg-slate-950 text-textColor-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] before:bg-[size:40px_40px] before:[mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_100%,transparent_100%)] after:fixed after:bottom-0 after:z-[-2] after:w-full after:h-screen after:bg-[radial-gradient(ellipse_80%_80%_at_50%_125%,rgba(120,119,198,0.2),rgba(255,255,255,0))]">
+    <Header client:load i18n={i18nHeader} />
     <main class="mt-[80px] tablet:mt-[70px]">
 		  <slot />
     </main>
-    <SocialMedia client:load />
+    <SocialMedia client:load currentLocale={currentLocale} />
 	</body>
 </html>
 <style is:global>
@@ -48,20 +50,10 @@ const { title } = Astro.props;
     background-color: #fff;
   }
 
-  * {
+  html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .animate__zoomIn {
-    --animate-duration: 0.25s;
+    font-family: 'Onest Variable', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 </style>
