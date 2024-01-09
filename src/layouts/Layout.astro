@@ -50,10 +50,57 @@ const { currentLocale } = Astro
     background-color: #fff;
   }
 
+  @keyframes blur {
+    to {
+      box-shadow:
+        0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+        0px 0px 0 1px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+    0% {
+      opacity: 0;
+    }
+  }
+
   html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Onest Variable', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+  }
+
+  #header-nav {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  .scroll-animation {
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range-start: 0%;
+    animation-range-end: 40%;
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 499px) {
+    html {
+      font-size: 15px;
+    }
   }
 </style>

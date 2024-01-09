@@ -11,9 +11,16 @@ const HeaderNavItem = ({ children, animationDelay, to }: {
     delay: animationDelay,
     animation: 'animate-zoomIn'
   })
+  const handleScroll = () => {
+    const section = document.querySelector(`${to.toLowerCase()}`)
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
-    <li className={`${animation} cursor-pointer transition-colors py-[0.5em] relative group hover:text-textColor-300`}>
+    <li
+      className={`${animation} cursor-pointer transition-colors py-[0.5em] relative group hover:text-textColor-300`}
+      onClick={handleScroll}
+    >
       { children }
     </li>
   )

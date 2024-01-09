@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 
-interface Props {
+// animation prop gets an animation name from tailwind.config
+const useAnimation = ({ delay, animation }: {
   delay: number
   animation: string
-}
-
-const useAnimation = ({ delay, animation }: Props) => {
+}) => {
   const [animated, setAnimated] = useState('invisible')
 
   useEffect(() => {

@@ -14,5 +14,62 @@
     },
     "PRIMARY_BTN": "Obtener CV",
     "SECONDARY_BTN": "Sobre mí"
+  },
+  "ABOUT_ME": {
+    "TITLE": "Un poco sobre mí",
+    "PARAGRAPH_1": "👋 Hola! Tengo 24 años, nací en Argentina 🇦🇷 y soy un apasionado por el Desarrollo de Software. Disfruto de crear aplicaciones escalables y eficientes, tanto en el lado del servidor como en el del cliente.",
+    "PARAGRAPH_2": "Busco crecer continuamente como profesional y adquirir nuevos conocimientos que me permitan lograr el éxito en cualquier proyecto.",
+    "PARAGRAPH_3": "Actualmente me encuentro estudiando la carrera de Licenciatura en Sistemas 📚 en la Universidad Argentina de la Empresa (UADE).",
+    "SKILLS": [
+      "Proactividad",
+      "Comunicación efectiva",
+      "Resolución de problemas",
+      "Trabajo en equipo",
+      "Adaptable al cambio"
+    ]
+  },
+  "EXPERIENCE": {
+    "TITLE": "My professional experience",
+    "EXPERIENCES": [
+      {
+        "JOB_TITLE": "Software Developer",
+        "COMPANY": {
+          "NAME": "S.A.S.A",
+          "LINK": "http://www.sisadm.com.ar/"
+        },
+        "FROM_DATE": "September 2023",
+        "TO_DATE": "Present",
+        "RESPONSIBILITIES": [
+          "Responsible for the development and mantainance of the company's B2C e-commerce platform, employing technologies such as React.js, Next.js, TypeScript, and TailwindCSS.",
+          "Drove the creation of unit and integration tests utilizing Jest and React-testing-library, ensuring a high standard of code quality and reliability.",
+          "Demonstrated a 21% enhancement in SEO performance by leveraging tools such as Web Vitals and Lighthouse."
+        ]
+      },
+      {
+        "JOB_TITLE": "Front-end Developer",
+        "COMPANY": {
+          "NAME": "Ryutech",
+          "LINK": "https://www.ryutech.cl/"
+        },
+        "FROM_DATE": "Dicember 2020",
+        "TO_DATE": "September 2023",
+        "RESPONSIBILITIES": [
+          "Responsible for the development and mantainance of the company's B2C e-commerce platform, employing technologies such as React.js, Next.js, TypeScript, and TailwindCSS.",
+          "Drove the creation of unit and integration tests utilizing Jest and React-testing-library."
+        ]
+      },
+      {
+        "JOB_TITLE": "Software Developer [Freelance]",
+        "COMPANY": {
+          "NAME": "Vision 5 ",
+          "LINK": "https://www.ryutech.cl/"
+        },
+        "FROM_DATE": "March 2022",
+        "TO_DATE": "August 2022",
+        "RESPONSIBILITIES": [
+          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors."
+        ]
+      }
+    ]
   }
 }

@@ -1,12 +1,16 @@
 ---
 interface Props {
+  id?: string
   class?: string
   maxWidth: string
 }
 
-const { class: className, maxWidth } = Astro.props
+const { id, class: className, maxWidth } = Astro.props
 ---
 
-<section class={`mx-auto px-4 tablet:px-0 tablet:w-[75%] ${className}`} style={{ maxWidth }}>
+<section 
+  id={id?.toLowerCase()}
+  class={`mx-auto px-4 tablet:px-0 tablet:w-[75%] min-h-[calc(100vh-5rem)] tablet:min-h-screen flex items-center ${className}`} 
+  style={{ maxWidth }}>
   <slot />
 </section>

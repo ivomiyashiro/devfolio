@@ -1,0 +1,30 @@
+---
+import Section from "@/layouts/Section.astro"
+import { Button, Title } from "@/components/ui"
+
+const { i18n } = Astro.props
+---
+
+<Section maxWidth="900px" class="py-20 tablet:py-0" id="about">
+  <div class="scroll-animation flex flex-col">
+    <Title>{ i18n.TITLE }</Title>
+    <div class="flex flex-col items-center justify-center tablet:items-start tablet:flex-row-reverse gap-12">
+      <span class="relative shrink-0 w-[275px] h-[275px] bg-aboutMe bg-cover rounded-lg before:contenct-[''] before:absolute before:top-0 before:left-0 before:scale-[1.03] before:hover:scale-105 before:transition-transform before:w-full before:h-full before:[background:_inherit] before:rounded-lg before:blur-[15px] before:bg-cover before:opacity-50 before:-z-10" />
+      <div class="flex flex-col gap-4 ">
+        <p set:html={i18n.PARAGRAPH_1}></p>
+        <p set:html={i18n.PARAGRAPH_2}></p>
+        <p set:html={i18n.PARAGRAPH_3}></p>
+        <div>
+          <p>{i18n.PARAGRAPH_4}</p>
+          <div class="mt-3 flex flex-wrap gap-3">
+            { i18n.SKILLS.map((skill: string) => (
+              <Button variant="outlined" className="text-sm font-medium">
+                {skill}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

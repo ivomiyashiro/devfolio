@@ -25,7 +25,7 @@ const MobileMenu = ({ i18n, isOpen, handleMenuOpen }: {
 }) => {
   return (
     <menu className={
-      `block w-full tablet:hidden h-screen fixed top-0 left-0 px-4 transition-all ${isOpen ? 'visible z-20' : 'translate-x-[-100%] delay-[.35s]'}
+      `block w-full tablet:hidden min-h-screen fixed top-0 left-0 px-4 transition-all ${isOpen ? 'visible z-20' : 'translate-x-[-100%] delay-[.35s]'}
        after:content-[""] after:h-full after:left-0 after:absolute after:transition-transform after:duration-[.35s] after:w-full after:z-10 after:bg-accent-200 ${isOpen ? 'after:translate-x-0 after:delay-0' : 'after:translate-x-[-100%] after:delay-[.25s]'}
        before:content-[""] before:h-full before:left-0 before:absolute before:transition-transform before:duration-[.35s] before:w-full before:z-20 before:bg-slate-950 ${isOpen ? 'before:translate-x-0 before:delay-[.15s]' : 'before:translate-x-[-100%] before:delay-[.15s]'}
       `

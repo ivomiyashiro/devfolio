@@ -34,6 +34,9 @@ export default {
         tablet: '768px',
         mobile: '499px'
       },
+      backgroundImage: {
+        aboutMe: 'url(\'./src/assets/ivan-miyashiro.webp\')'
+      },
       animation: {
         fadeUp: 'fadeUp 0.5s ease-in-out',
         zoomIn: 'zoomIn 0.3s ease-in-out'

@@ -1,0 +1,47 @@
+---
+import Section from "@/layouts/Section.astro";
+import { Title } from "@/components/ui";
+
+const { i18n } = Astro.props
+---
+
+<Section id="experience" maxWidth="800px" class="py-20 tablet:py-0">
+  <div class="scroll-animation w-full">
+    <Title>{i18n.TITLE}</Title>
+    <ul class="relative before:bg-textColor-200 before:inline before:absolute before:left-[7px] before:w-px before:top-[0px] before:mt-[0.4em] before:h-[calc(100%-0.4em)] z-10">
+      { i18n.EXPERIENCES.map(({ JOB_TITLE, COMPANY, FROM_DATE, TO_DATE, RESPONSIBILITIES }: any) => (
+        <li class="pl-10 pb-3 last:pb-0 before:bg-[#111827] before:inline before:absolute before:rounded-full before:border-2 before:border-accent-200 before:-left-px before:mt-[0.4em] before:w-[17px] before:h-[17px]">
+          <h3 class="text-textColor-300 text-lg text-medium">
+            {JOB_TITLE}
+            <span class="text-accent-100">
+              @
+              <a 
+                href={COMPANY.LINK} 
+                target="_blank" 
+                class="relative after:absolute after:w-0 after:h-px after:bg-accent-100 after:bottom-0 after:left-0 after:hover:w-full after:transition-all"
+              >
+                {COMPANY.NAME}
+              </a>
+            </span>
+          </h3>
+          <div class="font-mono text-xs my-px">
+            <time datetime={FROM_DATE}>
+              {FROM_DATE}
+            </time>
+            <span>-</span>
+            <time datetime={TO_DATE}>
+              {TO_DATE}  
+            </time>
+          </div>
+          <ul class="mt-2">
+            {RESPONSIBILITIES.map((responsability: string) => (
+              <li class="relative pl-7 mb-2 before:content-['⭐️'] before:absolute before:left-0">
+                {responsability}
+              </li>
+            ))}
+          </ul>
+        </li>
+      )) }
+    </ul>
+  </div>
+</Section>
