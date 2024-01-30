@@ -1,4 +1,4 @@
-const Logo = () => {
+const DevLogo = () => {
   return (
     <a href="/" className="cursor-pointer">
       <p className="text-[2rem] font-bold text-textColor-300 relative left-0 z-10 tablet:text-[2.5rem]">
@@ -8,4 +8,4 @@ const Logo = () => {
   )
 }
 
-export default Logo
+export default DevLogo

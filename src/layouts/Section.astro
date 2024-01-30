@@ -10,7 +10,8 @@ const { id, class: className, maxWidth } = Astro.props
 
 <section 
   id={id?.toLowerCase()}
-  class={`mx-auto px-4 tablet:px-0 tablet:w-[75%] min-h-[calc(100vh-5rem)] tablet:min-h-screen flex items-center ${className}`} 
-  style={{ maxWidth }}>
+  class={`mx-auto py-24 px-6 tablet:px-0 tablet:w-[75%] flex items-center ${className}`} 
+  style={{ maxWidth }}
+>
   <slot />
 </section>

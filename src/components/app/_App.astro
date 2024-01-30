@@ -5,12 +5,14 @@ import Layout from "@/layouts/Layout.astro";
 import Hero from "./Hero.astro";
 import About from './About.astro'
 import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
+import Skills from "./Skills.astro";
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<Layout 
+<Layout
   title="Ivan Miyashiro - Software Developer" 
   description={i18n.SEO_DESCRIPTION}
   i18nHeader={i18n.HEADER}
@@ -18,4 +20,6 @@ const i18n = getI18N({ currentLocale })
   <Hero i18n={i18n.HERO} />
   <About i18n={i18n.ABOUT_ME} />
   <Experience i18n={i18n.EXPERIENCE} />
+  <Projects i18n={i18n.PROJECTS} />
+  <Skills i18n={i18n.SKILLS} />
 </Layout>

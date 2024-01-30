@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        clamp: 'clamp(40px, 8vw, 65px)'
+        hero: 'clamp(1.5rem, 8vw, 65px)',
+        skills: 'clamp(26px,3vw,32px)'
       },
       colors: {
         primary: '#1E2F48',
@@ -38,10 +39,21 @@ export default {
         aboutMe: 'url(\'./src/assets/ivan-miyashiro.webp\')'
       },
       animation: {
+        fade: 'fade 1s ease-in-out forwards',
         fadeUp: 'fadeUp 0.5s ease-in-out',
-        zoomIn: 'zoomIn 0.3s ease-in-out'
+        zoomIn: 'zoomIn 0.3s ease-in-out',
+        slideUp: '20s ease-out 0s 1 normal forwards running slideUp',
+        slideDown: '20s ease-out 0s 1 normal forwards running slideDown'
       },
       keyframes: {
+        fade: {
+          from: {
+            opacity: 0
+          },
+          to: {
+            opacity: 1
+          }
+        },
         fadeUp: {
           '0%': {
             opacity: 0,
@@ -60,6 +72,22 @@ export default {
           '100%': {
             transform: 'scale(1)',
             opacity: 1
+          }
+        },
+        slideUp: {
+          '0%': {
+            transform: 'translateY(-300px)'
+          },
+          '100%': {
+            transform: 'translateY(-20px)'
+          }
+        },
+        slideDown: {
+          '0%': {
+            transform: 'translateY(150px)'
+          },
+          '100%': {
+            transform: 'translateY(-80px)'
           }
         }
       }

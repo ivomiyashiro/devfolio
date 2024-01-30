@@ -12,6 +12,7 @@ const Button = ({
   isLink = false,
   variant = 'default',
   className,
+  onClick,
   ...props
 }: Props) => {
   let style = ''
@@ -28,14 +29,14 @@ const Button = ({
 
   if (isLink) {
     return (
-      <a className={communStyles} {...props}>
+      <a className={communStyles} onClick={onClick} {...props}>
         {children}
       </a>
     )
   }
 
   return (
-    <button className={communStyles} {...props}>
+    <button className={communStyles} onClick={onClick} {...props}>
       {children}
     </button>
   )

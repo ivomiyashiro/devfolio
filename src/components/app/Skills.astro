@@ -1,0 +1,17 @@
+---
+import Section from "@/layouts/Section.astro"
+import { SkillsList } from "@/components/ui"
+
+const { i18n } = Astro.props as { i18n: SKILLS }
+---
+
+<Section 
+  id="skills"
+  maxWidth="900px"
+  class="-z-20"
+>
+  <SkillsList 
+    client:load 
+    title={i18n.TITLE}
+  />
+</Section>

@@ -1,0 +1,18 @@
+---
+import Section from "@/layouts/Section.astro"
+import { Projects as ProjectsComponent } from "@/components/ui"
+
+const { i18n } = Astro.props as { i18n: PROJECTS }
+---
+
+<Section 
+  id="projects"
+  maxWidth="1200px"
+  class="flex flex-col justify-center items-baseline"
+>
+  <ProjectsComponent
+    client:load
+    title={i18n.TITLE}
+    projects={i18n.PROJECTS_LIST}
+  />
+</Section>

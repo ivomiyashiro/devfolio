@@ -20,6 +20,7 @@
     "PARAGRAPH_1": "👋 Hola! Tengo 24 años, nací en Argentina 🇦🇷 y soy un apasionado por el Desarrollo de Software. Disfruto de crear aplicaciones escalables y eficientes, tanto en el lado del servidor como en el del cliente.",
     "PARAGRAPH_2": "Busco crecer continuamente como profesional y adquirir nuevos conocimientos que me permitan lograr el éxito en cualquier proyecto.",
     "PARAGRAPH_3": "Actualmente me encuentro estudiando la carrera de Licenciatura en Sistemas 📚 en la Universidad Argentina de la Empresa (UADE).",
+    "PARAGRAPH_4": "Estas son algunas de mis habilidades:",
     "SKILLS": [
       "Proactividad",
       "Comunicación efectiva",
@@ -71,5 +72,31 @@
         ]
       }
     ]
+  },
+  "PROJECTS": {
+    "TITLE": "Lo que he creado",
+    "PROJECTS_LIST": [
+      {
+        "NAME": "Ryutech",
+        "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
+        "GITHUB_LINK": "",
+        "PROJECT_LINK": ""
+      },
+      {
+        "NAME": "NoBugs Books",
+        "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
+        "GITHUB_LINK": "",
+        "PROJECT_LINK": ""
+      },
+      {
+        "NAME": "Gymrat",
+        "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
+        "GITHUB_LINK": "",
+        "PROJECT_LINK": ""
+      }
+    ]
+  },
+  "SKILLS": {
+    "TITLE": "He creado con"
   }
 }

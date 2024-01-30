@@ -8,7 +8,7 @@ const LANGUAGES = {
 
 export const getI18N = ({ currentLocale = 'en' }: {
   currentLocale: string | undefined
-}): any => {
+}): RootData => {
   if (currentLocale === LANGUAGES.ENGLISH) return english
   if (currentLocale === LANGUAGES.SPANISH) return spanish
   return english

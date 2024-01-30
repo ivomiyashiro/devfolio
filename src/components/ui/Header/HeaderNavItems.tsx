@@ -2,24 +2,25 @@ import type { ReactNode } from 'react'
 import useAnimation from '@/hooks/useAnimation'
 import { Button } from '@/components/ui'
 
-const HeaderNavItem = ({ children, animationDelay, to }: {
+export const handleScroll = (to: string) => {
+  const section = document.querySelector(`${to.toLowerCase()}`)
+  section?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+const HeaderNavItem = ({ children, animationDelay, toSection }: {
   children: ReactNode
-  to: string
+  toSection: string
   animationDelay: number
 }) => {
   const animation = useAnimation({
     delay: animationDelay,
     animation: 'animate-zoomIn'
   })
-  const handleScroll = () => {
-    const section = document.querySelector(`${to.toLowerCase()}`)
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
 
   return (
     <li
       className={`${animation} cursor-pointer transition-colors py-[0.5em] relative group hover:text-textColor-300`}
-      onClick={handleScroll}
+      onClick={() => { handleScroll(toSection) }}
     >
       { children }
     </li>
@@ -32,7 +33,7 @@ const HeaderNavItems = ({ i18n }: { i18n: string[] }) => {
       { i18n.map((text, index) => (
         <HeaderNavItem
           key={index}
-          to={`#${text}`}
+          toSection={`#${text}`}
           animationDelay={index * 150}
         >
           { index + 1 !== i18n.length

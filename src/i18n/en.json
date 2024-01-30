@@ -3,9 +3,9 @@
   "HEADER": [
     "About",
     "Experience",
-    "Tech",
     "Projects",
-    "Contact"
+    "Skills",
+    "Resume"
   ],
   "HERO": {
     "RICH_TEXT": {
@@ -30,7 +30,7 @@
     ]
   },
   "EXPERIENCE": {
-    "TITLE": "Professional experience",
+    "TITLE": "My working experience",
     "EXPERIENCES": [
       {
         "JOB_TITLE": "Software Developer",
@@ -72,5 +72,31 @@
         ]
       }
     ]
+  },
+  "PROJECTS": {
+    "TITLE": "What I've built",
+    "PROJECTS_LIST": [
+      {
+        "NAME": "Ryutech",
+        "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
+        "GITHUB_LINK": "",
+        "PROJECT_LINK": ""
+      },
+      {
+        "NAME": "NoBugs Books",
+        "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
+        "GITHUB_LINK": "",
+        "PROJECT_LINK": ""
+      },
+      {
+        "NAME": "Gymrat",
+        "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
+        "GITHUB_LINK": "",
+        "PROJECT_LINK": ""
+      }
+    ]
+  },
+  "SKILLS": {
+    "TITLE": "I've crafted with"
   }
 }
