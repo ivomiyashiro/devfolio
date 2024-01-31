@@ -97,7 +97,7 @@ const SkillsList = ({ title }: { title: string }) => {
           return (
             <li
               key={id}
-              className={`relative flex items-center justify-center w-full h-full bg-slate-950 aspect-square rounded-lg ${index === 4 || index === 10 ? 'col-span-2 aspect-auto tablet:col-span-1 tablet:aspect-square' : ''}`}
+              className={`relative flex items-center justify-center w-full h-full bg-slate-950 aspect-square rounded-lg ${index === 4 || index === 10 ? 'col-span-2 aspect-video tablet:col-span-1 tablet:aspect-square' : ''}`}
               onMouseOver={() => { handleActiveSkill(id); handlePause(true) }}
               onMouseLeave={() => { handlePause(false) }}
             >

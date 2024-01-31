@@ -98,5 +98,12 @@
   },
   "SKILLS": {
     "TITLE": "I've crafted with"
+  },
+  "CONTACT": {
+    "TITLE": "Get In Touch",
+    "TEXT": "If you're interested in what I do and would like to work with me, contact me through my email or any social media and I'll answer your message as soon as possible!"
+  },
+  "FOOTER": {
+    "TEXT":"Designed & Crafted by Ivan Miyashiro"
   }
 }

@@ -1,5 +1,6 @@
+import { getSocialMedia } from '@/helpers/getSocialMedia'
 import useAnimation from '@/hooks/useAnimation'
-import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon, LanguageIcon } from '@/components/ui'
+import { LanguageIcon } from '@/components/ui'
 
 const SocialMediaItem = ({ icon: Icon, href, target, animationDelay }: {
   icon: any
@@ -25,33 +26,15 @@ const SocialMedia = ({ currentLocale, isOpen }: {
   currentLocale?: string
   isOpen?: boolean
 }) => {
-  const ITEMS = [
+  const socialMedia = getSocialMedia()
+  const items = [
     {
       name: 'Lagunage',
       href: `/${currentLocale === 'es' ? '' : 'es'}`,
       target: '_self',
       icon: LanguageIcon
-    }, {
-      name: 'Github',
-      href: 'https://github.com/IvoMiyashiro',
-      target: '_blank',
-      icon: GithubIcon
-    }, {
-      name: 'Linkedin',
-      href: 'https://www.linkedin.com/in/ivanmiyashiro/',
-      target: '_blank',
-      icon: LinkedinIcon
-    }, {
-      name: 'Instagram',
-      href: 'https://github.com/IvoMiyashiro',
-      target: '_blank',
-      icon: InstagramIcon
-    }, {
-      name: 'Email',
-      href: 'mailto: ivo.miyashiro1@gmail.com',
-      target: '_blank',
-      icon: MailIcon
-    }
+    },
+    ...socialMedia
   ]
 
   return (
@@ -60,7 +43,7 @@ const SocialMedia = ({ currentLocale, isOpen }: {
       ${(isOpen !== undefined && isOpen) ? 'opacity-100 delay-[.4s] translate-y-[-60%]' : ''}
       tablet:opacity-100 tablet:fixed tablet:flex-col tablet:mt-0 tablet:w-auto tablet:bottom-0 tablet:justify-center tablet:px-12 tablet:translate-y-0
     `}>
-      { ITEMS.map(({ href, icon: Icon, target }, index) => (
+      { items.map(({ href, icon: Icon, target }, index) => (
         <SocialMediaItem
           key={index}
           icon={Icon}

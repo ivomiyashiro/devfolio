@@ -98,5 +98,12 @@
   },
   "SKILLS": {
     "TITLE": "He creado con"
+  },
+  "CONTACT": {
+    "TITLE": "Estemos en contacto",
+    "TEXT": "Si estás interesado en lo que hago y te gustaría trabajar conmigo, contáctame a través de mi correo electrónico o cualquier red social y responderé tu mensaje lo antes posible!"
+  },
+  "FOOTER": {
+    "TEXT":"Creado & Diseñado por Ivan Miyashiro"
   }
 }

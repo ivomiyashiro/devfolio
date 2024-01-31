@@ -1,12 +1,13 @@
 ---
-import { Header, SocialMedia } from '@/components/ui'
+import { Footer, Header, SocialMedia } from '@/components/ui'
 import '@fontsource-variable/onest';
 
 const { currentLocale } = Astro
-const { title, description, i18nHeader } = Astro.props as {
+const { title, description, i18nHeader, i18nFooter } = Astro.props as {
 	title: string
   description: string
   i18nHeader: string[]
+  i18nFooter: FOOTER
 };
 ---
 
@@ -24,6 +25,7 @@ const { title, description, i18nHeader } = Astro.props as {
     <Header client:load i18n={i18nHeader} />
     <main class="mt-[80px] tablet:mt-[70px]">
 		  <slot />
+      <Footer i18n={i18nFooter} />
     </main>
     <SocialMedia client:load currentLocale={currentLocale} />
 	</body>

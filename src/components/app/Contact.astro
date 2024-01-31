@@ -1,0 +1,26 @@
+---
+import Section from "@/layouts/Section.astro"
+import { ArrowLeftIcon, Button, Title } from "@/components/ui"
+
+const { i18n } = Astro.props as { i18n: CONTACT }
+---
+
+<Section 
+  id="skills"
+  maxWidth="650px"
+  class="w-full flex flex-col"
+>
+  <Title aligment="center">
+    { i18n.TITLE }
+  </Title>
+  <p class="text-center">{ i18n.TEXT }</p>
+  <Button 
+    variant="outlined"
+    isLink={true}
+    href="mailto: ivo.miyashiro1@gmail.com"
+    className="mt-12 w-[150px] h-[50px]"
+  >
+    Send Email
+    <ArrowLeftIcon className="ml-2" />
+  </Button>
+</Section>

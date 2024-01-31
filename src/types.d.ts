@@ -6,6 +6,8 @@ interface RootData {
   EXPERIENCE: EXP
   PROJECTS: PROJECTS
   SKILLS: SKILLS
+  CONTACT: CONTACT
+  FOOTER: FOOTER
 }
 
 interface PROJECTS {
@@ -60,4 +62,13 @@ interface RICH_TEXT {
 
 interface SKILLS {
   TITLE: string
+}
+
+interface CONTACT {
+  TITLE: string
+  TEXT: string
+}
+
+interface FOOTER {
+  TEXT: string
 }
