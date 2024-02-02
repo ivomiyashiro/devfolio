@@ -1,6 +1,6 @@
 ---
 import Section from "@/layouts/Section.astro"
-import { Button } from "@/components/ui"
+import { ArrowLeftIcon, Button } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: HERO }
 
@@ -25,13 +25,25 @@ const codingYears = new Date().getFullYear() - 2020
           </Button>
           <Button
             variant="outlined" 
-            className="w-[125px] tablet:w-[150px] !rounded"
-            onClick={() => console.log('hola')}
+            className="w-[125px] tablet:w-[150px] !rounded flex gap-2"
+            data-about-btn
           >
             {i18n.SECONDARY_BTN}
+            <ArrowLeftIcon />
           </Button>
         </div>
       </div>
     </div>
   </div>
 </Section>
+
+<script>
+  const button = document.querySelector("[data-about-btn]")
+  const aboutSection = document.querySelector("#about")
+
+  if (button) {
+    button.addEventListener("click", () => {
+      aboutSection?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+  }
+</script>

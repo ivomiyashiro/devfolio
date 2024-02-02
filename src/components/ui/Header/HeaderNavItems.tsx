@@ -4,7 +4,7 @@ import { Button } from '@/components/ui'
 
 export const handleScroll = (to: string) => {
   const section = document.querySelector(`${to.toLowerCase()}`)
-  section?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  section?.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 
 const HeaderNavItem = ({ children, animationDelay, toSection }: {
