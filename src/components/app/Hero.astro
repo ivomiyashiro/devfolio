@@ -1,7 +1,6 @@
 ---
 import Section from "@/layouts/Section.astro"
 import { Button } from "@/components/ui"
-import { handleScroll } from "@/components/ui/Header/HeaderNavItems"
 
 const { i18n } = Astro.props as { i18n: HERO }
 
@@ -25,7 +24,6 @@ const codingYears = new Date().getFullYear() - 2020
             {i18n.PRIMARY_BTN}
           </Button>
           <Button
-            client:load
             variant="outlined" 
             className="w-[125px] tablet:w-[150px] !rounded"
             onClick={() => console.log('hola')}

@@ -2,16 +2,43 @@
 interface Props {
   id?: string
   class?: string
+  animated?: boolean
   maxWidth: string
 }
 
-const { id, class: className, maxWidth } = Astro.props
+const { id, class: className, maxWidth, animated = false } = Astro.props
 ---
 
-<section 
+<animated-section 
   id={id?.toLowerCase()}
-  class={`mx-auto py-24 px-6 tablet:px-0 tablet:w-[75%] flex items-center ${className}`} 
+  data-id={animated && id?.toLocaleLowerCase()}
+  class={`mx-auto py-24 px-6 tablet:px-0 tablet:w-[75%] flex items-center ${animated && 'opacity-0'} ${className}`} 
   style={{ maxWidth }}
 >
   <slot />
-</section>
+</animated-section>
+
+<script>
+  class AnimatedSection extends HTMLElement {
+    constructor() {
+      super();
+
+      const id = this.dataset.id || "";
+      const section = document.getElementById(id?.toLowerCase())
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeUp');
+          }
+        });
+      }, { threshold: 0.25 });
+
+      if (section) {
+        observer.observe(section);
+      }
+    }
+  }
+
+  customElements.define('animated-section', AnimatedSection)
+</script>

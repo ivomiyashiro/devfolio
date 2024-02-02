@@ -14,10 +14,11 @@ const ProjectsArticles = ({ projects, activeTab, handleActiveTab }: {
           spaceBetween={20}
           pagination={{ clickable: true }}
           className="flex flex-col"
+          onSlideChange={({ activeIndex }) => { handleActiveTab(activeIndex) }}
         >
-          { projects.map(({ NAME, DESCRIPTION, GITHUB_LINK, PROJECT_LINK }, i) => (
+          { projects.map(({ NAME, DESCRIPTION, GITHUB_LINK, PROJECT_LINK }, index) => (
             <SwiperSlide
-              key={i}
+              key={index}
               className="max-w-[325px] tablet:max-w-none"
             >
               <ProjectCard
@@ -28,19 +29,20 @@ const ProjectsArticles = ({ projects, activeTab, handleActiveTab }: {
               />
             </SwiperSlide>
           ))}
+          {/* This slide let the swiper display all projects well */}
           <SwiperSlide className="max-w-[325px] tablet:max-w-none" />
         </Swiper>
       </div>
       <div className="hidden tablet:flex flex-col tablet:gap-8 w-full">
-        { projects.map(({ NAME, DESCRIPTION, GITHUB_LINK, PROJECT_LINK }, i) => (
+        { projects.map(({ NAME, DESCRIPTION, GITHUB_LINK, PROJECT_LINK }, index) => (
           <ProjectCard
-            key={i}
+            key={index}
             title={NAME}
             description={DESCRIPTION}
             githubLink={GITHUB_LINK}
             projectLink={PROJECT_LINK}
-            isActive={activeTab === i}
-            onClick={() => { handleActiveTab(i) }}
+            isActive={activeTab === index}
+            onClick={() => { handleActiveTab(index) }}
           />
         ))}
       </div>

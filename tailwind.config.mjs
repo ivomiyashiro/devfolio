@@ -40,8 +40,8 @@ export default {
       },
       animation: {
         fade: 'fade 1s ease-in-out forwards',
-        fadeUp: 'fadeUp 0.5s ease-in-out',
-        zoomIn: 'zoomIn 0.3s ease-in-out',
+        fadeUp: 'fadeUp 0.5s ease-in-out forwards',
+        zoomIn: 'zoomIn 0.3s ease-in-out forwards',
         slideUp: '20s ease-out 0s 1 normal forwards running slideUp',
         slideDown: '20s ease-out 0s 1 normal forwards running slideDown'
       },
