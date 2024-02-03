@@ -1,5 +1,5 @@
 {
-  "SEO_DESCRIPTION": "Ivan Miyashiro, a dedicate Software Developer with 4+ years of experience in the industry. Discover who I am, explore my skills and projects, and feel free to contact me.",
+  "SEO_DESCRIPTION": "Ivan Miyashiro, a dedicate Software Developer with +3 years of experience in the industry. Discover who I am, explore my skills and projects, and feel free to contact me.",
   "HEADER": [
     "About",
     "Experience",
@@ -10,14 +10,17 @@
   "HERO": {
     "RICH_TEXT": {
       "ACCENT": "years of experience",
-      "TEXT": "crafting high-performance web apps. I stand out in JavaScript technologies such as"
+      "TEXT": "crafting fullstack, scalable and high-performance web applications."
     },
     "PRIMARY_BTN": "Get Resume",
     "SECONDARY_BTN": "About Me"
   },
   "ABOUT_ME": {
     "TITLE": "A little about me",
-    "PARAGRAPH_1": "👋 Hello! I am 24 years old, I was born in Argentina 🇦🇷 and I am passionate about Software Development. I enjoy creating scalable and efficient applications, both on the server and client sides.",
+    "PARAGRAPH_1": {
+      "PART_1": "👋 Hello! I am",
+      "PART_2": "years old, I was born in Argentina 🇦🇷 and I am passionate about Software Development. I enjoy creating scalable and efficient applications, both on the server and client sides."
+    },
     "PARAGRAPH_2": "I seek to continually grow as a professional and acquire new knowledge that allows me to achieve success in any project.",
     "PARAGRAPH_3": "I am currently studying a Bachelor's degree in Systems 📚 at Universidad Argentina de la Empresa (UADE).",
     "PARAGRAPH_4": "These are some of my skills:",
@@ -41,9 +44,9 @@
         "FROM_DATE": "September 2023",
         "TO_DATE": "Present",
         "RESPONSIBILITIES": [
-          "Responsible for the development and mantainance of the company's B2C e-commerce platform, employing technologies such as React.js, Next.js, TypeScript, and TailwindCSS.",
-          "Drove the creation of unit and integration tests utilizing Jest and React-testing-library, ensuring a high standard of code quality and reliability.",
-          "Demonstrated a 21% enhancement in SEO performance by leveraging tools such as Web Vitals and Lighthouse."
+          "Development of an administrative system for consortia, implementing features such as expense management and amenities's reservations.",
+          "Development of a fast and efficient user interface using React and other third-party libraries like DevExpress.",
+          "Development of a REST API using technologies such as .NET, EntityFramework, and SQL Server as database."
         ]
       },
       {
@@ -55,24 +58,21 @@
         "FROM_DATE": "Dicember 2020",
         "TO_DATE": "September 2023",
         "RESPONSIBILITIES": [
-          "Responsible for the development and mantainance of the company's B2C e-commerce platform, employing technologies such as React.js, Next.js, TypeScript, and TailwindCSS.",
-          "Drove the creation of unit and integration tests utilizing Jest and React-testing-library."
+          "Responsible for the development and maintenance of the company's B2C e-commerce through technologies such as TypeScript, React, and Next.",
+          "Consumption of the Shopify API for retrieving products data using technologies like GraphQL.",
+          "Developed unit tests to ensure the proper functioning and scalability of the application using Jest and React-testing-library."
         ]
       },
       {
         "JOB_TITLE": "Software Developer [Freelance]",
         "COMPANY": {
           "NAME": "Vision 5 ",
-          "LINK": "https://www.ryutech.cl/"
+          "LINK": "https://www.vision5electronics.com/"
         },
         "FROM_DATE": "March 2022",
         "TO_DATE": "August 2022",
         "RESPONSIBILITIES": [
-          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors.",
-          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors.",
-          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors.",
-          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors.",
-          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors."
+          "Development of a Node.js application to automate a stock loading process, resulting in a saving of approximately 45 minutes of work."
         ]
       }
     ]

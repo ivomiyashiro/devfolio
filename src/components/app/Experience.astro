@@ -1,11 +1,16 @@
 ---
 import Section from "@/layouts/Section.astro";
 import { Title, Timeline } from "@/components/ui";
+import { SECTIONS_IDS } from "@/helpers/adaptHeaderItems";
 
 const { i18n } = Astro.props as { i18n: EXP }
 ---
 
-<Section id="experience" maxWidth="800px" animated>
+<Section 
+  id={SECTIONS_IDS[1]} 
+  maxWidth="800px" 
+  animated={true}
+>
   <div class="scroll-animation w-full relative">
     <Title>{i18n.TITLE}</Title>
     <Timeline 

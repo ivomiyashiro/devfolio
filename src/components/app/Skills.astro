@@ -1,15 +1,16 @@
 ---
 import Section from "@/layouts/Section.astro"
+import { SECTIONS_IDS } from "@/helpers/adaptHeaderItems"
 import { SkillsList } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: SKILLS }
 ---
 
 <Section 
-  id="skills"
+  id={SECTIONS_IDS[3]}
   maxWidth="900px"
   class="-z-20"
-  animated
+  animated={true}
 >
   <SkillsList 
     client:load 

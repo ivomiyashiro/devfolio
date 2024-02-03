@@ -1,15 +1,16 @@
 ---
 import Section from "@/layouts/Section.astro"
+import { SECTIONS_IDS } from "@/helpers/adaptHeaderItems"
 import { Projects as ProjectsComponent } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: PROJECTS }
 ---
 
 <Section 
-  id="projects"
+  id={SECTIONS_IDS[2]}
   maxWidth="1200px"
   class="flex flex-col justify-center items-baseline"
-  animated
+  animated={true}
 >
   <ProjectsComponent
     client:load

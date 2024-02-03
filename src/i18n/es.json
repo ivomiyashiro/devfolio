@@ -3,21 +3,24 @@
   "HEADER": [
     "Sobre mi",
     "Experiencia",
-    "Tecnologías",
     "Proyectos",
-    "Contacto"
+    "Habilidades",
+    "CV"
   ],
   "HERO": {
     "RICH_TEXT": {
       "ACCENT": "años de experiencia",
-      "TEXT": "creando aplicaciones web de alto rendimiento. Me destaco en tecnologías de JavaScript como"
+      "TEXT": "creando aplicaciones web fullstack, escalables y de alto rendimiento."
     },
     "PRIMARY_BTN": "Obtener CV",
     "SECONDARY_BTN": "Sobre mí"
   },
   "ABOUT_ME": {
     "TITLE": "Un poco sobre mí",
-    "PARAGRAPH_1": "👋 Hola! Tengo 24 años, nací en Argentina 🇦🇷 y soy un apasionado por el Desarrollo de Software. Disfruto de crear aplicaciones escalables y eficientes, tanto en el lado del servidor como en el del cliente.",
+    "PARAGRAPH_1": {
+      "PART_1": "👋 Hola! Tengo",
+      "PART_2": "años, nací en Argentina 🇦🇷 y soy un apasionado por el Desarrollo de Software. Disfruto de crear aplicaciones escalables y eficientes, tanto en el lado del servidor como en el del cliente."
+    },
     "PARAGRAPH_2": "Busco crecer continuamente como profesional y adquirir nuevos conocimientos que me permitan lograr el éxito en cualquier proyecto.",
     "PARAGRAPH_3": "Actualmente me encuentro estudiando la carrera de Licenciatura en Sistemas 📚 en la Universidad Argentina de la Empresa (UADE).",
     "PARAGRAPH_4": "Estas son algunas de mis habilidades:",
@@ -30,7 +33,7 @@
     ]
   },
   "EXPERIENCE": {
-    "TITLE": "My professional experience",
+    "TITLE": "Mi experiencia profesional",
     "EXPERIENCES": [
       {
         "JOB_TITLE": "Software Developer",
@@ -38,37 +41,38 @@
           "NAME": "S.A.S.A",
           "LINK": "http://www.sisadm.com.ar/"
         },
-        "FROM_DATE": "September 2023",
-        "TO_DATE": "Present",
+        "FROM_DATE": "Septiembre 2023",
+        "TO_DATE": "Presente",
         "RESPONSIBILITIES": [
-          "Responsible for the development and mantainance of the company's B2C e-commerce platform, employing technologies such as React.js, Next.js, TypeScript, and TailwindCSS.",
-          "Drove the creation of unit and integration tests utilizing Jest and React-testing-library, ensuring a high standard of code quality and reliability.",
-          "Demonstrated a 21% enhancement in SEO performance by leveraging tools such as Web Vitals and Lighthouse."
+          "Desarrollo de un sistema administrativo para consorcios, implementando funcionalidades como gestión de expensas y reservas de amenities.",
+          "Desarrollo de la interfaz de usuario rápida y eficiente utilizando React y otras librerías de terceros como DevExpress.",
+          "Desarrollo de una REST API a través de herramientas como .NET, EntityFramework y SQL Server como base de datos."
         ]
       },
       {
-        "JOB_TITLE": "Front-end Developer",
+        "JOB_TITLE": "Front-End Developer",
         "COMPANY": {
           "NAME": "Ryutech",
           "LINK": "https://www.ryutech.cl/"
         },
-        "FROM_DATE": "Dicember 2020",
-        "TO_DATE": "September 2023",
+        "FROM_DATE": "Diciembre 2020",
+        "TO_DATE": "Septiembre 2023",
         "RESPONSIBILITIES": [
-          "Responsible for the development and mantainance of the company's B2C e-commerce platform, employing technologies such as React.js, Next.js, TypeScript, and TailwindCSS.",
-          "Drove the creation of unit and integration tests utilizing Jest and React-testing-library."
+          "Responsable del desarrollo y mantenimiento del e-commerce B2C de la empresa a través de tecnologías como TypeScript, React y Next.",
+          "Consumo de la API de Shopify para obtener los diferentes productos a través de herramientas como GraphQL.",
+          "Desarrollo de pruebas unitarias para asegurarme el correcto funcionamiento y escalabilidad de la aplicación utilizando Jest y React-testing-library."
         ]
       },
       {
         "JOB_TITLE": "Software Developer [Freelance]",
         "COMPANY": {
           "NAME": "Vision 5 ",
-          "LINK": "https://www.ryutech.cl/"
+          "LINK": "https://www.vision5electronics.com/"
         },
-        "FROM_DATE": "March 2022",
-        "TO_DATE": "August 2022",
+        "FROM_DATE": "Marzo 2022",
+        "TO_DATE": "Agosto 2022",
         "RESPONSIBILITIES": [
-          "Responsible for the development of a Node.js application for automating stock loading, resulting in a daily time saving of 45 minutes and reducing potential errors."
+          "Desarrollo de una aplicación de Node.js para automatizar un proceso de carga de stock, logrando ahorrar un total aproximado de 45 minutos de trabajo."
         ]
       }
     ]
@@ -97,7 +101,7 @@
     ]
   },
   "SKILLS": {
-    "TITLE": "He creado con"
+    "TITLE": "He construido con"
   },
   "CONTACT": {
     "TITLE": "Estemos en contacto",

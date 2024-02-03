@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Button, ChevronDown } from '@/components/ui'
 
-const DEFAULT_MAX_HEIGHT = 525
+const DEFAULT_MAX_HEIGHT = 480
 
 const useTimeline = () => {
   const [isExpanded, setExpanded] = useState(false)
@@ -53,7 +53,7 @@ const Timeline = ({ i18n }: { i18n: EXP }) => {
               <time dateTime={FROM_DATE}>
                 {FROM_DATE}
               </time>
-              <span>-</span>
+              <span> - </span>
               <time dateTime={TO_DATE}>
                 {TO_DATE}
               </time>

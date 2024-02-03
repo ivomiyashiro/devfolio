@@ -1,19 +1,31 @@
 ---
 import Section from "@/layouts/Section.astro"
+import { SECTIONS_IDS } from "@/helpers/adaptHeaderItems"
 import { Button, Title } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: ABOUT }
+
+const myBDay: any = new Date('1999-04-02')
+const today: any = new Date()
+
+const diferenciaEnMilisegundos = today - myBDay
+
+const yearsOld = Math.floor(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 365.25))
 ---
 
-<Section id="about" maxWidth="900px" animated>
+<Section 
+  id={SECTIONS_IDS[0]} 
+  maxWidth="900px" 
+  animated={true}
+>
   <div class="scroll-animation flex flex-col">
     <Title>{ i18n.TITLE }</Title>
     <div class="flex flex-col items-center justify-center tablet:items-start tablet:flex-row-reverse gap-12">
       <span class="relative shrink-0 w-[275px] h-[275px] bg-aboutMe bg-cover rounded-lg before:contenct-[''] before:absolute before:top-0 before:left-0 before:scale-[1.03] before:hover:scale-105 before:transition-transform before:w-full before:h-full before:[background:_inherit] before:rounded-lg before:blur-[15px] before:bg-cover before:opacity-50 before:-z-10" />
       <div class="flex flex-col gap-4 ">
-        <p set:html={i18n.PARAGRAPH_1}></p>
-        <p set:html={i18n.PARAGRAPH_2}></p>
-        <p set:html={i18n.PARAGRAPH_3}></p>
+        <p>{i18n.PARAGRAPH_1.PART_1} {yearsOld} {i18n.PARAGRAPH_1.PART_2}</p>
+        <p>{i18n.PARAGRAPH_2}</p>
+        <p>{i18n.PARAGRAPH_3}</p>
         <div>
           <p>{i18n.PARAGRAPH_4}</p>
           <div class="mt-3 flex flex-wrap gap-3">

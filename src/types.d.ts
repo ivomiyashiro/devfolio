@@ -42,7 +42,10 @@ interface COMPANY {
 
 interface ABOUT {
   TITLE: string
-  PARAGRAPH_1: string
+  PARAGRAPH_1: {
+    PART_1: string
+    PART_2: string
+  }
   PARAGRAPH_2: string
   PARAGRAPH_3: string
   PARAGRAPH_4: string

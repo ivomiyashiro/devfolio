@@ -4,7 +4,7 @@ import { ArrowLeftIcon, Button } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: HERO }
 
-const codingYears = new Date().getFullYear() - 2020
+const codingYears = new Date().getFullYear() - 2021
 ---
 
 <Section class="min-h-[calc(100vh-5rem)] max-h-none pt-20" maxWidth="1000px">
@@ -17,7 +17,7 @@ const codingYears = new Date().getFullYear() - 2020
           <span class="mobile:hidden block text-textColor-200">Software Dev.</span>
         </h1>
         <p class="mt-[1em] mb-[3em] leading-[1.5em] tablet:max-w-[550px] font-light">
-          <span class="text-accent-100 font-medium">+{codingYears} {i18n.RICH_TEXT.ACCENT} </span> {i18n.RICH_TEXT.TEXT}<span class="text-accent-100 font-medium"> React.js & Node.js</span>
+          <span class="text-accent-100 font-medium">+{codingYears} {i18n.RICH_TEXT.ACCENT} </span> {i18n.RICH_TEXT.TEXT}
         </p>
         <div class="flex gap-4">
           <Button className="w-[125px] tablet:w-[150px] tablet:h-[45px]">

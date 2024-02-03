@@ -1,11 +1,9 @@
 import type { ReactNode } from 'react'
 import useAnimation from '@/hooks/useAnimation'
-import { Button } from '@/components/ui'
 
-export const handleScroll = (to: string) => {
-  const section = document.querySelector(`${to.toLowerCase()}`)
-  section?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-}
+import { scrollTo, adaptHeaderItems } from '@/helpers'
+
+import { Button } from '@/components/ui'
 
 const HeaderNavItem = ({ children, animationDelay, toSection }: {
   children: ReactNode
@@ -20,7 +18,7 @@ const HeaderNavItem = ({ children, animationDelay, toSection }: {
   return (
     <li
       className={`${animation} cursor-pointer transition-colors py-[0.5em] relative group hover:text-textColor-300`}
-      onClick={() => { handleScroll(toSection) }}
+      onClick={() => { scrollTo(toSection, 'center') }}
     >
       { children }
     </li>
@@ -28,12 +26,14 @@ const HeaderNavItem = ({ children, animationDelay, toSection }: {
 }
 
 const HeaderNavItems = ({ i18n }: { i18n: string[] }) => {
+  const adaptedHeaderItems = adaptHeaderItems(i18n)
+
   return (
     <ul className="hidden gap-[2.5em] items-center tablet:flex">
-      { i18n.map((text, index) => (
+      { adaptedHeaderItems.map(({ text, id }, index) => (
         <HeaderNavItem
           key={index}
-          toSection={`#${text}`}
+          toSection={`#${id}`}
           animationDelay={index * 150}
         >
           { index + 1 !== i18n.length
@@ -43,7 +43,7 @@ const HeaderNavItems = ({ i18n }: { i18n: string[] }) => {
                 <span className="bg-accent-100 bottom-0 h-[3px] absolute transition-width duration-200 w-0 group-hover:w-full" />
               </>)
             : (
-              <Button variant="outlined" className="w-24 h-10">
+              <Button variant="outlined" className="!px-6 h-10">
                 { text }
               </Button>)
           }

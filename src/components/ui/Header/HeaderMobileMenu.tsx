@@ -1,6 +1,6 @@
 import type { ReactNode, Dispatch, SetStateAction } from 'react'
 import { SocialMedia } from '@/components/ui'
-import { handleScroll } from './HeaderNavItems'
+import { scrollTo } from '@/helpers'
 
 const HeaderMobileNavItem = ({ children, toSection, handleMenuOpen }: {
   children: ReactNode
@@ -10,7 +10,7 @@ const HeaderMobileNavItem = ({ children, toSection, handleMenuOpen }: {
   return (
     <li
       className="align-items-center cursor-pointer flex text-base font-semibold gap-6 py-2 px-1.5 relative transition duration-200"
-      onClick={() => { handleScroll(toSection); handleMenuOpen(false) }}
+      onClick={() => { scrollTo(toSection, 'start'); handleMenuOpen(false) }}
     >
       <div className="flex items-center gap-[0.5em] px-[12px] py-[20px]">
         <p className="text-[1.65rem] font-semibold hover:text-textColor-300 transition-colors">{ children }</p>
