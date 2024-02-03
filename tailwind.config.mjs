@@ -38,6 +38,9 @@ export default {
       backgroundImage: {
         aboutMe: 'url(\'./src/assets/ivan-miyashiro.webp\')'
       },
+      transitionProperty: {
+        height: 'height'
+      },
       animation: {
         fade: 'fade 1s ease-in-out forwards',
         fadeUp: 'fadeUp 0.5s ease-in-out forwards',

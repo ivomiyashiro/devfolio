@@ -25,7 +25,7 @@ const Button = ({
     style = 'border border-btn-200 text-accent-200 hover:bg-btn-250'
   }
 
-  const communStyles = `flex items-center justify-center rounded-[10px] px-[0.65em] py-[0.55em] transition text-sm tablet:text-md ${style} ${className}`
+  const communStyles = `flex items-center justify-center rounded px-[0.65em] py-[0.55em] transition text-sm tablet:text-md ${style} ${className}`
 
   if (isLink) {
     return (

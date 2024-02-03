@@ -14,7 +14,10 @@ const ProjectsArticles = ({ projects, activeTab, handleActiveTab }: {
           spaceBetween={20}
           pagination={{ clickable: true }}
           className="flex flex-col"
-          onSlideChange={({ activeIndex }) => { handleActiveTab(activeIndex) }}
+          onSlideChange={({ activeIndex }) => {
+            if (activeIndex === 2) return // Prevents showing last slide
+            handleActiveTab(activeIndex)
+          }}
         >
           { projects.map(({ NAME, DESCRIPTION, GITHUB_LINK, PROJECT_LINK }, index) => (
             <SwiperSlide
@@ -29,7 +32,7 @@ const ProjectsArticles = ({ projects, activeTab, handleActiveTab }: {
               />
             </SwiperSlide>
           ))}
-          {/* This slide let the swiper display all projects well */}
+          {/* This slide lets the swiper display all projects well */}
           <SwiperSlide className="max-w-[325px] tablet:max-w-none" />
         </Swiper>
       </div>

@@ -18,7 +18,7 @@ const { i18n } = Astro.props as { i18n: ABOUT }
           <p>{i18n.PARAGRAPH_4}</p>
           <div class="mt-3 flex flex-wrap gap-3">
             { i18n.SKILLS.map((skill: string) => (
-              <Button variant="outlined" className="text-sm font-medium">
+              <Button variant="outlined" className="text-sm font-medium !px-4 !rounded-lg">
                 {skill}
               </Button>
             ))}
