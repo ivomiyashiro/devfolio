@@ -36,7 +36,7 @@ export default {
         mobile: '499px'
       },
       backgroundImage: {
-        aboutMe: 'url(\'./src/assets/ivan-miyashiro.webp\')'
+        aboutMe: 'url(\'./public/ivan-miyashiro.webp\')'
       },
       transitionProperty: {
         height: 'height'
