@@ -9,7 +9,7 @@ const Footer = ({ i18n }: { i18n: FOOTER }) => {
       <ul className="flex gap-4 mt-3">
         { socialMedia.map(({ href, icon: Icon, target }, index) => (
           <li key={index}>
-            <a href={href}>
+            <a href={href} target={target}>
               { <Icon
                 width={16}
                 height={16}
