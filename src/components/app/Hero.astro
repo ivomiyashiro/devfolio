@@ -1,6 +1,6 @@
 ---
 import Section from "@/layouts/Section.astro"
-import { ArrowLeftIcon, Button } from "@/components/ui"
+import { ArrowLeftIcon, Button, ResumeButton } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: HERO }
 
@@ -20,9 +20,9 @@ const codingYears = new Date().getFullYear() - 2021
           <span class="text-accent-100 font-medium">+{codingYears} {i18n.RICH_TEXT.ACCENT} </span> {i18n.RICH_TEXT.TEXT}
         </p>
         <div class="flex gap-4">
-          <Button className="w-[125px] tablet:w-[150px] tablet:h-[45px]">
+          <ResumeButton className="w-[125px] tablet:w-[150px] tablet:h-[45px]">
             {i18n.PRIMARY_BTN}
-          </Button>
+          </ResumeButton>
           <Button
             variant="outlined" 
             className="w-[125px] tablet:w-[150px] tablet:h-[45px] flex gap-2"

@@ -4,6 +4,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorEleme
   children: ReactNode
   isLink?: boolean
   href?: string
+  target?: '_blank' | '_self' | '_parent' | '_top' | string
   variant?: 'default' | 'outlined'
 }
 
@@ -11,6 +12,7 @@ const Button = ({
   children,
   isLink = false,
   variant = 'default',
+  target,
   className,
   onClick,
   ...props
@@ -29,7 +31,12 @@ const Button = ({
 
   if (isLink) {
     return (
-      <a className={communStyles} onClick={onClick} {...props}>
+      <a
+        className={communStyles}
+        target={target}
+        onClick={onClick}
+        {...props}
+      >
         {children}
       </a>
     )

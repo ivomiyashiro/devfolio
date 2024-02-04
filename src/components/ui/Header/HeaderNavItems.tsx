@@ -3,7 +3,7 @@ import useAnimation from '@/hooks/useAnimation'
 
 import { scrollTo, adaptHeaderItems } from '@/helpers'
 
-import { Button } from '@/components/ui'
+import { ResumeButton } from '@/components/ui'
 
 const HeaderNavItem = ({ children, animationDelay, toSection }: {
   children: ReactNode
@@ -43,9 +43,9 @@ const HeaderNavItems = ({ i18n }: { i18n: string[] }) => {
                 <span className="bg-accent-100 bottom-0 h-[3px] absolute transition-width duration-200 w-0 group-hover:w-full" />
               </>)
             : (
-              <Button variant="outlined" className="!px-6 h-10">
+              <ResumeButton variant="outlined" className="!px-6 h-10">
                 { text }
-              </Button>)
+              </ResumeButton>)
           }
         </HeaderNavItem>
       ))}
