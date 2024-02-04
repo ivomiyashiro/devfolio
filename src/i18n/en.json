@@ -83,20 +83,20 @@
       {
         "NAME": "Ryutech",
         "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
-        "GITHUB_LINK": "",
-        "PROJECT_LINK": ""
+        "GITHUB_LINK": "https://github.com/ivomiyashiro/ryutech",
+        "PROJECT_LINK": "https://ryutech.vercel.app/"
       },
       {
         "NAME": "NoBugs Books",
         "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
-        "GITHUB_LINK": "",
-        "PROJECT_LINK": ""
+        "GITHUB_LINK": "https://github.com/ivomiyashiro/bookshop-api",
+        "PROJECT_LINK": "https://nobugsbooks.vercel.app/"
       },
       {
         "NAME": "Gymrat",
         "DESCRIPTION": "B2C ecommerce crafted with Next.js, GraphQL and TailwindCSS.",
-        "GITHUB_LINK": "",
-        "PROJECT_LINK": ""
+        "GITHUB_LINK": "https://github.com/ivomiyashiro/gymrat",
+        "PROJECT_LINK": "https://gymrat-nextjs.vercel.app/"
       }
     ]
   },
