@@ -45,7 +45,7 @@
         "TO_DATE": "Presente",
         "RESPONSIBILITIES": [
           "Desarrollo de un sistema administrativo para consorcios, implementando funcionalidades como gestión de expensas y reservas de amenities.",
-          "Desarrollo de la interfaz de usuario rápida y eficiente utilizando React y otras librerías de terceros como DevExpress.",
+          "Desarrollo de la interfaz de usuario rápida y eficiente utilizando React y otras librerías de terceros como DevExpress y Material UI.",
           "Desarrollo de una REST API a través de herramientas como .NET, EntityFramework y SQL Server como base de datos."
         ]
       },

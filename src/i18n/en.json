@@ -45,7 +45,7 @@
         "TO_DATE": "Present",
         "RESPONSIBILITIES": [
           "Development of an administrative system for consortia, implementing features such as expense management and amenities's reservations.",
-          "Development of a fast and efficient user interface using React and other third-party libraries like DevExpress.",
+          "Development of a fast and efficient user interface using React and other third-party libraries like DevExpress and Material UI.",
           "Development of a REST API using technologies such as .NET, EntityFramework, and SQL Server as database."
         ]
       },
