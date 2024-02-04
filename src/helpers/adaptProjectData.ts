@@ -11,12 +11,12 @@ export const adaptProjectsData = (data: PROJECT_ITEM[]): ADAPTED_PROJECT_ITEM[] 
       return {
         ...project,
         IMAGES: [
-          'public/ryutech/ryutech-ecommerce-1.webp',
-          'public/ryutech/ryutech-ecommerce-2.webp',
-          'public/ryutech/ryutech-ecommerce-3.webp',
-          'public/ryutech/ryutech-ecommerce-4.webp',
-          'public/ryutech/ryutech-ecommerce-5.webp',
-          'public/ryutech/ryutech-ecommerce-6.webp'
+          '/ryutech/ryutech-ecommerce-1.webp',
+          '/ryutech/ryutech-ecommerce-2.webp',
+          '/ryutech/ryutech-ecommerce-3.webp',
+          '/ryutech/ryutech-ecommerce-4.webp',
+          '/ryutech/ryutech-ecommerce-5.webp',
+          '/ryutech/ryutech-ecommerce-6.webp'
         ],
         LOGOS: [
           NextLogo,
@@ -28,12 +28,12 @@ export const adaptProjectsData = (data: PROJECT_ITEM[]): ADAPTED_PROJECT_ITEM[] 
       return {
         ...project,
         IMAGES: [
-          'public/nobugs-books/nobugs-books-1.webp',
-          'public/nobugs-books/nobugs-books-2.webp',
-          'public/nobugs-books/nobugs-books-3.webp',
-          'public/nobugs-books/nobugs-books-4.webp',
-          'public/nobugs-books/nobugs-books-5.webp',
-          'public/nobugs-books/nobugs-books-6.webp'
+          '/nobugs-books/nobugs-books-1.webp',
+          '/nobugs-books/nobugs-books-2.webp',
+          '/nobugs-books/nobugs-books-3.webp',
+          '/nobugs-books/nobugs-books-4.webp',
+          '/nobugs-books/nobugs-books-5.webp',
+          '/nobugs-books/nobugs-books-6.webp'
         ],
         LOGOS: [
           NextLogo,
@@ -45,12 +45,12 @@ export const adaptProjectsData = (data: PROJECT_ITEM[]): ADAPTED_PROJECT_ITEM[] 
       return {
         ...project,
         IMAGES: [
-          'public/gymrat/gymrat-1.webp',
-          'public/gymrat/gymrat-6.webp',
-          'public/gymrat/gymrat-2.webp',
-          'public/gymrat/gymrat-4.webp',
-          'public/gymrat/gymrat-3.webp',
-          'public/gymrat/gymrat-5.webp'
+          '/gymrat/gymrat-1.webp',
+          '/gymrat/gymrat-6.webp',
+          '/gymrat/gymrat-2.webp',
+          '/gymrat/gymrat-4.webp',
+          '/gymrat/gymrat-3.webp',
+          '/gymrat/gymrat-5.webp'
         ],
         LOGOS: [
           NextLogo,
