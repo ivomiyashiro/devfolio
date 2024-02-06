@@ -15,7 +15,7 @@ const ProjectsArticles = ({ projects, activeTab, handleActiveTab }: {
           pagination={{ clickable: true }}
           className="flex flex-col"
           onSlideChange={({ activeIndex }) => {
-            if (activeIndex === 2) return // Prevents showing last slide
+            if (activeIndex === projects.length) return // Prevents showing last slide
             handleActiveTab(activeIndex)
           }}
         >
