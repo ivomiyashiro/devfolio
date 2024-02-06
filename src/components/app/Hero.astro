@@ -7,11 +7,11 @@ const { i18n } = Astro.props as { i18n: HERO }
 const codingYears = new Date().getFullYear() - 2021
 ---
 
-<Section class="min-h-[calc(100vh-5rem)] max-h-none pt-20" maxWidth="1000px">
+<Section class="min-h-[calc(100svh-5rem)] max-h-none pt-20" maxWidth="1000px">
   <div class="flex items-center h-full w-full relative">
     <div class="flex flex-col justify-center w-full tablet:p-0">
       <div class={'animate-fadeUp delay-[2s]'}>
-        <h1 class="text-hero font-extrabold text-textColor-300 leading-[1.2em] tracking-wide">
+        <h1 class="text-[2.5rem] mobile:text-hero font-extrabold text-textColor-300 leading-[1.2em] tracking-wide">
           Ivan Miyashiro.
           <span class="hidden mobile:block text-textColor-200">Software Developer.</span>
           <span class="mobile:hidden block text-textColor-200">Software Dev.</span>
