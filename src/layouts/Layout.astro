@@ -25,7 +25,7 @@ const { title, description, i18nHeader, i18nFooter } = Astro.props as {
     <Header client:load i18n={i18nHeader} />
     <main class="mt-[80px] tablet:mt-[70px]">
 		  <slot />
-      <Footer i18n={i18nFooter} />
+      <Footer i18n={i18nFooter} currentLocale={currentLocale} />
     </main>
     <SocialMedia client:load currentLocale={currentLocale} />
 	</body>
