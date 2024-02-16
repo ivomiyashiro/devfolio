@@ -20,9 +20,9 @@ const Footer = ({ currentLocale, i18n }: {
     <footer className="mt-24 flex flex-col items-center justify-center py-6">
       <p className="text-xs font-mono">{ i18n.TEXT }</p>
       <ul className="flex gap-4 mt-3">
-        { items.map(({ href, icon: Icon, target }, index) => (
+        { items.map(({ href, icon: Icon, target, name }, index) => (
           <li key={index}>
-            <a href={href} target={target}>
+            <a aria-label={`This link goes to my ${name}`} href={href} target={target}>
               { <Icon
                 width={16}
                 height={16}

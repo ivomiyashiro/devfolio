@@ -2,10 +2,11 @@ import { getSocialMedia } from '@/helpers/getSocialMedia'
 import useAnimation from '@/hooks/useAnimation'
 import { LanguageIcon } from '@/components/ui'
 
-const SocialMediaItem = ({ icon: Icon, href, target, animationDelay }: {
+const SocialMediaItem = ({ icon: Icon, href, target, name, animationDelay }: {
   icon: any
   href?: string
   target: string
+  name: string
   animationDelay: number
 }) => {
   const animation = useAnimation({
@@ -15,7 +16,12 @@ const SocialMediaItem = ({ icon: Icon, href, target, animationDelay }: {
 
   return (
     <li className={`${animation} cursor-pointer hover:text-textColor-300 transition-colors`}>
-      <a href={href} target={target} rel="noreferrer">
+      <a
+        href={href}
+        target={target}
+        rel="noreferrer"
+        aria-label={`This link goes to my ${name}`}
+      >
         <Icon height={20} width={20} />
       </a>
     </li>
@@ -29,7 +35,7 @@ const SocialMedia = ({ currentLocale, isOpen }: {
   const socialMedia = getSocialMedia()
   const items = [
     {
-      name: 'Lagunage',
+      name: 'Language',
       href: `/${currentLocale === 'es' ? '' : 'es'}`,
       target: '_self',
       icon: LanguageIcon
@@ -43,16 +49,17 @@ const SocialMedia = ({ currentLocale, isOpen }: {
       ${(isOpen !== undefined && isOpen) ? 'opacity-100 delay-[.4s] translate-y-[-60%]' : ''}
       tablet:opacity-100 tablet:fixed tablet:flex-col tablet:mt-0 tablet:w-auto tablet:bottom-0 tablet:justify-center tablet:px-12 tablet:translate-y-0
     `}>
-      { items.map(({ href, icon: Icon, target }, index) => (
+      { items.map(({ href, icon: Icon, target, name }, index) => (
         <SocialMediaItem
           key={index}
           icon={Icon}
           href={href}
           target={target}
+          name={name}
           animationDelay={index * 150}
         />
       )) }
-      <span className="h-px w-full bg-gray-500 ml-6 tablet:w-px tablet:h-[120px] tablet:ml-0" />
+      <li className="h-px w-full bg-gray-500 ml-6 tablet:w-px tablet:h-[120px] tablet:ml-0"></li>
     </ul>
   )
 }
