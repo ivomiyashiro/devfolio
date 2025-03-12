@@ -4,13 +4,6 @@ import { SECTIONS_IDS } from "@/helpers/adaptHeaderItems"
 import { Button, Title } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: ABOUT }
-
-const myBDay: any = new Date('1999-04-02')
-const today: any = new Date()
-
-const diferenciaEnMilisegundos = today - myBDay
-
-const yearsOld = Math.floor(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 365.25))
 ---
 
 <Section 
@@ -23,7 +16,7 @@ const yearsOld = Math.floor(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 36
     <div class="flex flex-col items-center justify-center tablet:items-start tablet:flex-row-reverse gap-12">
       <span class="relative shrink-0 w-[275px] h-[275px] bg-aboutMe bg-cover rounded-lg before:contenct-[''] before:absolute before:top-0 before:left-0 before:scale-[1.03] before:hover:scale-105 before:transition-transform before:w-full before:h-full before:[background:_inherit] before:rounded-lg before:blur-[15px] before:bg-cover before:opacity-50 before:-z-10" />
       <div class="flex flex-col gap-4 ">
-        <p>{i18n.PARAGRAPH_1.PART_1} {yearsOld} {i18n.PARAGRAPH_1.PART_2}</p>
+        <p>{i18n.PARAGRAPH_1.PART_1} <span id="age"></span> {i18n.PARAGRAPH_1.PART_2}</p>
         <p>{i18n.PARAGRAPH_2}</p>
         <p>{i18n.PARAGRAPH_3}</p>
         <div>
@@ -40,3 +33,34 @@ const yearsOld = Math.floor(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 36
     </div>
   </div>
 </Section>
+
+<script>
+  function calculateAge() {
+    const myBDay = new Date('1999-04-02');
+    const today = new Date();
+    const differenceInMilliseconds = today.getTime() - myBDay.getTime();
+    const yearsOld = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365.25));
+    
+    const ageElement = document.getElementById('age');
+
+    if (ageElement) {
+      ageElement.textContent = yearsOld.toString();
+    }
+  }
+
+  calculateAge();
+
+  const now = new Date();
+  const night = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate() + 1,
+    0, 0, 0
+  );
+  const msToMidnight = night.getTime() - now.getTime();
+  
+  setTimeout(() => {
+    calculateAge();
+    setInterval(calculateAge, 24 * 60 * 60 * 1000);
+  }, msToMidnight);
+</script>

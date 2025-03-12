@@ -3,8 +3,6 @@ import Section from "@/layouts/Section.astro"
 import { ArrowLeftIcon, Button, ResumeButton } from "@/components/ui"
 
 const { i18n } = Astro.props as { i18n: HERO }
-
-const codingYears = new Date().getFullYear() - 2021
 ---
 
 <Section class="min-h-[calc(100svh-5rem)] max-h-none pt-20" maxWidth="1000px">
@@ -17,7 +15,7 @@ const codingYears = new Date().getFullYear() - 2021
           <span class="mobile:hidden block text-textColor-200">Software Dev.</span>
         </h1>
         <p class="mt-[1em] mb-[3em] leading-[1.5em] tablet:max-w-[550px] font-light">
-          <span class="text-accent-100 font-medium">+{codingYears} {i18n.RICH_TEXT.ACCENT} </span> {i18n.RICH_TEXT.TEXT}
+          <span class="text-accent-100 font-medium">+<span id="coding-years"></span> {i18n.RICH_TEXT.ACCENT} </span> {i18n.RICH_TEXT.TEXT}
         </p>
         <div class="flex gap-4">
           <ResumeButton className="w-[125px] tablet:w-[150px] tablet:h-[45px]">
@@ -45,5 +43,12 @@ const codingYears = new Date().getFullYear() - 2021
     button.addEventListener("click", () => {
       aboutSection?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     })
+  }
+
+  const codingYearsElement = document.getElementById("coding-years")
+
+  if (codingYearsElement) {
+    const codingYears = new Date().getFullYear() - 2021
+    codingYearsElement.textContent = codingYears.toString()
   }
 </script>
